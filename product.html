@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(49, 93, 120);
+    color: white;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header .cart {
+    font-size: 16px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product-images {
+    width: 50%;
+}
+
+.product-images img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.product-details {
+    padding: 20px;
+    width: 50%;
+}
+
+.product-details h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+.price {
+    font-size: 24px;
+    color: #e74c3c;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #7f8c8d;
+}
+
+.product-options {
+    margin-top: 20px;
+}
+
+.product-options .size,
+.product-options .color {
+    margin-bottom: 15px;
+}
+
+.product-options label {
+    font-size: 16px;
+}
+
+.color-option {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.quantity input {
+    width: 50px;
+    padding: 5px;
+}
+
+.add-to-cart-btn,
+.buy-now-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.add-to-cart-btn:hover,
+.buy-now-btn:hover {
+    background-color: #2980b9;
+}
+
+.product-description h3 {
+    font-size: 22px;
+}
+
+.product-description ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-description li {
+    margin: 5px 0;
+}
+
+/* Reviews Section */
+.reviews {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.reviews h3 {
+    font-size: 22px;
+}
+
+.reviews-list {
+    margin-top: 10px;
+}
+
+.review {
+    margin-bottom: 20px;
+}
+
+.reviewer-name {
+    font-weight: bold;
+}
+
+.review-rating {
+    color: gold;
+}
+
+.review p {
+    margin-top: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="logo">ELECTROMART</div>
+    <div class="cart">
+        <span>Cart <span id="span1"></span></span>
+    </div>
+</header>
+
+<!-- Product Section -->
+<section class="product-container">
+    <div class="product-images">
+        <img id="main-image" src="images/products/img8.jpg" style="position: absolute; margin-left: 120px; margin-top: 100px;" alt="Laptop Image" />
+    </div>
+
+    <div class="product-details">
+        <h1>Superfast Laptop X500</h1>
+        <p class="price"><span class="old-price">$1,499.99</span> $1,199.99</p>
+        
+        <div class="product-options">
+            <div class="size">
+                <label for="size">Size:</label>
+                <select id="size">
+                    <option value="13-inch">13 inch</option>
+                    <option value="15-inch">15 inch</option>
+                </select>
+            </div>
+            <div class="color">
+                <label for="color">Color:</label>
+                <button class="color-option" style="background-color: #000;" onclick="changeImage('laptop-black.jpg')"></button>
+                <button class="color-option" style="background-color: #ccc;" onclick="changeImage('laptop-silver.jpg')"></button>
+            </div>
+        </div>
+
+        <div class="quantity">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" value="1" min="1" max="10" />
+        </div>
+
+        <button id="add-to-cart" class="add-to-cart-btn" onclick="addtocart()">Add to Cart</button>
+        <button class="buy-now-btn">Buy Now</button>
+
+        <div class="product-description">
+            <h3>Product Details</h3>
+            <ul>
+                <li>Intel i7 Processor</li>
+                <li>16GB RAM</li>
+                <li>512GB SSD</li>
+                <li>13.3-inch Full HD Display</li>
+                <li>Windows 11</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Customer Reviews Section -->
+<section class="reviews">
+    <h3>Customer Reviews</h3>
+    <div class="reviews-list">
+        <div class="review">
+            <span class="reviewer-name">John D.</span>
+            <span class="review-rating">⭐⭐⭐⭐⭐</span>
+            <p>This laptop is amazing! Super fast and smooth.</p>
+        </div>
+        <div class="review">
+            <span class="reviewer-name">Sarah M.</span>
+            <span class="review-rating">⭐⭐⭐⭐☆</span>
+            <p>Great laptop, but the battery life could be better.</p>
+        </div>
+    </div>
+</section>
+<script>
+    
+    
+    
+    
+    function addtocart()
+    {
+        count=0
+        quantity=parseInt(document.getElementById("quantity").value)
+        span=document.getElementById("span1")
+        
+        count=quantity+count
+        console.log(count)
+        span1.innerHTML=count
+    }
+
+</script>
+</body>
+</html>

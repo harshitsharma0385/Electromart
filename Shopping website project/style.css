@@ -1,0 +1,359 @@
+/*HomePage*/
+body{
+    font-family: barlow;
+    /* background-color: 0F4C5C; */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.resmen{
+    display: none;
+    
+    
+    background-color: 36454F;  /*0F4C5C */  /*CF5C36*/
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    box-shadow: 5px 5px grey;
+    
+}
+
+.resmen a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.navba{
+    display: flex;
+    justify-content: space-around;
+    background-color: 36454F;  /*0F4C5C */  /*CF5C36*/
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    box-shadow: 5px 5px grey;
+}
+
+.navba a{
+    text-decoration: none;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+.carousel-item img{
+    height: 500px;
+    width: 100%;
+}
+
+.carouselarea{
+    margin-top: 70px;
+    right: 0px;
+    left: 0px;
+}
+#demo
+{
+    margin-top: 100px;
+}
+
+.carouselareaimg{
+    left: 0px;
+    right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    transform: scale(1.5);
+}
+
+.products{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.i16{
+    height: 250px;
+    margin-left: 70px;
+}
+
+.card{
+    height: 500px;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-top: 50px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 10px 10px whitesmoke;
+}
+
+.card img{
+    /* border-radius: 20px; */
+    margin-left: 60px;
+}
+
+
+.prodname{
+    text-align: center;
+}
+
+.prodhead{
+    text-align: center;
+    margin-top: 60px;
+}
+
+.cutp{
+    text-align: center;
+}
+
+.buycart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* margin-top: 100px; */
+}
+
+.prodprice{
+    text-align: center;
+}
+
+.buynow{
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    font-family: barlow;
+    background-color: F3B700;
+    font-size: 15px;
+    transition: 300ms ease;
+}
+
+.buynow:hover{
+    transform: scale(1.2);
+}
+
+.drop-conten{
+    display: none;
+    position: absolute;
+    background-color: 2C514C;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.drop-conten a{
+    padding: 20px;
+    transition: 250ms ease;
+}
+
+.dropdow .dropbt {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: CF5C36;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+
+.drop-conten a:hover{
+    background-color: black;
+    border-radius: 13.7px;
+}
+
+.dropdow:hover .drop-conten {
+    display: flex;
+    flex-direction: column;
+}
+
+.prod_searc{
+    border-radius: 8px;
+    width: 300px;
+    height: 39px;
+    font-family: barlow;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+
+/*Signup Page*/
+
+.inputs_signup{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    padding: 1px;
+}
+
+.inputs_signup input{
+    height: 50px;
+    padding: 20px;
+    margin: 10px;
+    font-family: Barlow;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.signbox{
+    margin-top: 100px;
+    border: 2px solid black;
+    height: 500px;
+    width: 800px;
+    border-radius: 20px; 
+    background-color: #f5deb3;
+    box-shadow: 20px 20px black;
+}
+
+.signhead{
+   font-size: 50px;
+
+}
+
+.inputs_signup button{
+    width: 150px;
+    height: 40px;
+    font-family: Barlow;
+    background-color: 0F4C5C;
+    color: white;
+    cursor:pointer;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.signbody{
+    background-color: CF5C36;
+}
+
+.signicons img{
+    padding: 0px 20px;
+    cursor: pointer;
+}
+
+
+/*Login Page*/
+
+.loginbox{
+    margin-top: 180px;
+    border: 2px solid black;
+    height: 450px;
+    width: 800px;
+    border-radius: 20px; 
+    background-color: #f5deb3;
+    box-shadow: 20px 20px black;
+}
+
+.forgotpwd{
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+/* Footer */
+.footer{
+    width: 100%;
+    height: 150px;
+    background-color: 36454F;
+    margin-top: 100px;
+    margin-top: 100;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.quicklinksfoot{
+    display: flex;
+    flex-direction: row;
+    margin-left: 150px;
+}
+
+.quicklinksfoot a{
+    text-decoration: none;
+    color: white;
+    padding: 50px;
+}
+
+.footlogo{
+    margin: 20px;
+}
+
+
+/* Categories Page */
+.categories{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.catcard{
+    background-color: snow;
+    width: 500px;
+    height: 250px;
+    border-radius: 20px;
+    border: 2px solid black;
+    align-content: center;
+    text-align: left;
+    padding-left: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.catcard img{
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+
+
+.catcard h1{
+    text-align: center;
+    
+}
+
+/*Media Tags*/
+
+@media only screen and (max-width: 900px){
+    .signbox{
+        width: 450px;
+        height: 500px;
+        box-shadow: 10px 10px black;
+    }
+    .loginbox{
+        width: 450px;
+        height: 500px;
+        box-shadow: 10px 10px black;
+    }
+    .inputs_signup input{
+        width: 400px;
+        margin-left: 20px;
+    }
+    .inputs_signup input{
+        margin-right: 50px;
+    }
+    .navba{
+        display: none;
+    }
+    .resmen{
+        display: flex;
+        flex-direction: row;
+        background-color: 36454F;
+        justify-content: space-around;
+    }
+}
